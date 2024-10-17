@@ -1,0 +1,1088 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+a {
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: "Satisfy", cursive;
+  font-style: normal;
+}
+
+body {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+:root {
+  --main-color: #061A3A;
+  --secondary-color: #FF7C5B;
+  --third-color: #808080;
+  --background-color: #ffffff;
+  --text-color: #333;
+  --border-color: #ddd;
+  --font-size: 16px;
+  --font-headsize: 54px;
+  --line-height: 1.5;
+  --font-weight-bold: 700;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  --gt-gradient-1: linear-gradient(90deg, rgb(67, 0, 231) 0%, rgb(125, 0, 252) 100%);
+}
+
+@font-face {
+  font-family: gelasio;
+  src: url('../fonts/Gelasio-VariableFont_wght.ttf');
+}
+
+body {
+  font-family: gelasio;
+}
+
+/*=============================== Style for the back to top button========================================= */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  display: none;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(68, 0, 231, 0.04)), to(rgba(123, 0, 254, 0.04)));
+  background: var(--gt-gradient-1);
+  color: black !important;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/*========================================= preloader ========================================*/
+/* Preloader container to cover the whole screen */
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Preloader image */
+.preloader-image {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  /* Space between image and loader */
+}
+
+/* Preloader animation (spinning circle) */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 6s linear infinite;
+}
+
+/* Keyframe for the spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hide the content initially */
+#content {
+  display: none;
+}
+
+#mainNav {
+  transition: all 0.3s ease-in-out;
+  height: 80px;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* Navbar style on scroll */
+.navbar-scrolled {
+  height: 40px !important;
+  /* Slightly opaque */
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-menu {
+  background: linear-gradient(90deg, #5300ed, #2d1d6d) !important;
+}
+
+.dropdown-menu a {
+  color: white !important;
+  font-weight: 600;
+}
+
+/*========================================= navbar =============================================*/
+.search-btn {
+  color: #fff;
+  background-color: transparent !important;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 100%;
+  background: var(--gt-gradient-1);
+}
+.nav {
+  padding: 17px 15px;
+  border-bottom: 1px solid #5300ed;
+  border-radius: 0px 0px 200px 200px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(68, 0, 231, 0.04)), to(rgba(123, 0, 254, 0.04)));
+  background: linear-gradient(90deg, rgba(68, 0, 231, 0.04) 0%, rgba(123, 0, 254, 0.04) 100%);
+}
+.navbar-collapse li a {
+  font-size: 24px;
+  color: black !important;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+/*======================================== hero section =======================================*/
+.hero {
+  width: 100%;
+  background-image: url('../image/banner/banner-4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.hero-inner {
+  padding: 150px 0px 170px 0px !important;
+}
+.hero-inner span {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.hero-inner-2 {
+  padding: 260px 0px 0px 0px;
+  position: relative;
+}
+.hero-inner-2 .main-img {
+  width: 550px !important;
+}
+.hero-child {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+}
+.form-inner {
+  display: flex;
+  gap: 20px;
+  background-color: white;
+}
+.video {
+  border-radius: 250px;
+  width: 100%;
+}
+#print-text::after {
+  content: '';
+  animation: blink 800ms infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-inner h1 {
+  font-size: 74px;
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-inner .color {
+  color: purple;
+  font-size: 74px;
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+
+  font-style: normal;
+}
+
+.hero-inner p {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-inner-2 .main-img {
+  animation: movecircle1 4s ease-in-out infinite;
+}
+
+.hero-inner-2 .hero-child {
+  animation: movecircle2 4s ease-in-out infinite;
+
+}
+
+.hero-head-1 img {
+  animation: movecircle3 4s ease-in-out infinite;
+
+}
+
+/* Keyframe animation for subtle floating */
+@keyframes movecircle3 {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-10px);
+    /* Move up */
+  }
+
+  50% {
+    transform: translateY(8);
+  }
+
+  75% {
+    transform: translateY(7px);
+    /* Move down */
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+/* Keyframe animation for subtle floating */
+@keyframes movecircle2 {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-10px);
+  }
+
+  50% {
+    transform: translateY(30);
+  }
+
+  75% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+/* Keyframe animation for subtle floating */
+@keyframes movecircle1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(10);
+  }
+
+  75% {
+    transform: translateY(10px);
+    /* Move down */
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #6d6d6d;
+  position: absolute;
+  top: 20%;
+  left: -20%;
+  z-index: 1 !important;
+  animation: moveCircle 4s ease-in-out infinite;
+}
+
+/* Keyframe animation for subtle floating */
+@keyframes moveCircle {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(30px, -50px);
+  }
+
+  50% {
+    transform: translate(20px, 20);
+  }
+
+  75% {
+    transform: translate(40px, 10px);
+  }
+
+  100% {
+    transform: translate(40, 1110);
+  }
+}
+
+/*======================================== end of  hero section =======================================*/
+
+
+/*======================================== top d section =======================================*/
+.top {
+  background-color: #FFFFFF;
+}
+
+.top-head {
+  text-align: center;
+}
+
+.top-head h1 {
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.top-head p {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.top-head-1 img {
+  animation: movecircle3 4s ease-in-out infinite;
+
+}
+
+.overlay-head img {
+  width: 400px !important;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.overlay-head {
+  position: relative;
+  display: inline-block;
+}
+
+.child-amount {
+  background: linear-gradient(rgb(77, 0, 235), rgb(117, 0, 249));
+  border-radius: 50px;
+  display: block;
+  padding: 10px;
+  color: black;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+
+
+}
+
+.top-card {
+  display: inline-block;
+  position: relative;
+}
+
+.top-card:hover .child-arrow {
+  display: block;
+  transform: scale(0.9);
+  filter: grayscale(100%);
+}
+
+.child-arrow {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  color: rgb(77, 0, 235);
+  font-size: 46px;
+  display: none;
+}
+
+.overlay-inner {
+  max-width: 300px;
+  background-color: #f3f8fc;
+  display: block;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  position: absolute;
+  top: 55%;
+  left: -7%;
+
+}
+
+.overlay-inner h2 {
+  font-size: 24px;
+
+}
+
+.overlay-headinner {
+  border-bottom: 1px solid gray;
+  display: inline-block;
+}
+
+.owl {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.overlay-head {
+  position: relative;
+  overflow: hidden;
+}
+
+.item {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.top-foot h3 {
+  text-align: center;
+  font-size: 22px;
+
+}
+
+.top-foot span {
+  color: rgb(77, 0, 235);
+  font-weight: 600;
+}
+
+/*======================================== end of top d section =======================================*/
+/*======================================== about section =======================================*/
+.about {
+  width: 100%;
+  background-image: url('../image/banner/about-bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.inner-about {
+  padding: 20px 0px 0px 0px;
+  padding-left: 145px !important;
+  padding-right: 145px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.ab-head h1 {
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.location-child {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+}
+
+.about-car img {
+  border-radius: 20px;
+}
+
+.guide-child {
+  position: absolute;
+  top: 30%;
+  left: 70%;
+}
+
+.about-inner-btn {
+  display: flex;
+  align-items: center;
+
+}
+
+.about-inner-btn p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 15px;
+
+}
+
+.about-inner-btn ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.about-inner-btn ul li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px solid white !important;
+  padding: 3px;
+
+  border-radius: 50%;
+}
+
+.learn a {
+  background: linear-gradient(rgb(77, 0, 235), rgb(117, 0, 249));
+  color: white;
+  padding: 10px 20px 10px 20px;
+  margin-top: 10px;
+  border-radius: 120px;
+  text-align: center !important;
+  align-items: center !important;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.learn a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.about-child-img {
+  animation: movecircle2 4s ease-in-out infinite;
+
+}
+
+.about-container {
+  padding-left: 150px !important;
+}
+
+.about-head-1 img {
+  animation: movecircle3 4s ease-in-out infinite;
+
+}
+
+
+
+
+/* ===========================================================gallery============================================================== */
+.gallery {
+  width: 100%;
+  background-image: url('../image/banner/gallery-bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px 40px 20px 40px;
+}
+
+.gallery-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 220px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-section img:hover {
+  transform: scale(1.1) rotate(3deg);
+  filter: brightness(1.2);
+
+}
+
+.gallery-hover {
+  background-color: #6d6d6d;
+  border-radius: 220px;
+  display: inline-block;
+  position: absolute;
+}
+
+.parent-gallery {
+  position: relative;
+}
+
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 75%;
+  border-radius: 10px;
+}
+
+.img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Zoom the image slightly on hover */
+.img-container:hover img {
+  transform: scale(1.1) rotate(5deg);
+  filter: brightness(1.2);
+
+}
+
+/* The text overlay */
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  margin-left: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 10px 25px 10px;
+  border-radius: 220px;
+}
+
+/* Display the overlay on hover */
+.img-container:hover .img-overlay {
+  opacity: 1;
+}
+
+/* =========================================================== end ofgallery============================================================== */
+
+/* ===========================================================Book============================================================== */
+.booking {
+  width: 100%;
+  background-image: url('../image/banner/work-step-bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.work-parent {
+  position: relative;
+}
+
+.work-child-1 {
+  position: absolute;
+  top: 0 !important;
+  left: 0;
+}
+
+.work-child-2 {
+  position: relative;
+
+
+}
+
+.work-parent-1 {
+  position: relative;
+}
+
+.work-child-2 {
+  position: absolute;
+  top: 0;
+  right: -30%;
+  z-index: 1;
+}
+
+.work-in {
+  position: relative;
+  z-index: 2;
+}
+
+.info-box {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-title h1 {
+  font-family: "Vesper Libre", serif;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px !important;
+}
+
+.info-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-icon {
+  background-color: #E6EFF2;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Icon animation on hover */
+.info-box:hover .info-icon {
+  transform: rotate(360deg);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.info-icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.info-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info-text {
+  color: #666;
+  text-align: justify;
+}
+
+.book-inner {
+  padding-bottom: 150px;
+}
+
+
+
+/* ===========================================================end of Book============================================================== */
+
+
+/*============================================================= offer section========================================================== */
+.parent-offer {
+  position: relative;
+}
+
+.offer-child-1 {
+  position: absolute;
+  top: 0;
+  left: -12%;
+}
+
+.offer-child-2 {
+  position: absolute;
+  top: 0;
+  right: 0%;
+}
+
+.off-40 {
+  position: absolute;
+  left: 20%;
+
+}
+
+.off-location {
+  position: absolute;
+  left: -20%;
+}
+
+.inner-off {
+  padding: 70px 0px 0px 350px;
+}
+
+.dis {
+  display: none;
+
+}
+
+.offer-image-flex {
+  display: flex;
+}
+
+/*=============================================================end offer section========================================================== */
+
+/*============================================================= offer section========================================================== */
+.offer {
+  width: 100%;
+  background-image: url('../image/banner/offer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.offer-inner {
+  padding: 40px 20px 0px 50px;
+  position: relative;
+}
+
+.off-40 {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+
+}
+
+.off-head h1 {
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 58px;
+  font-weight: 700;
+}
+
+/*============================================================= end offer section========================================================== */
+
+/*================================================================ online booking=========================================================== */
+.online-booking {
+  width: 100%;
+  background-image: url('../image/banner/booknow-bg.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.inner-booking {
+  padding-bottom: 200px;
+}
+
+.inner-booking h1 {
+  padding: 100px 0px 0px 0px;
+  text-align: center;
+  font-size: 74px;
+  font-weight: 800;
+}
+
+.inner-booking a {
+  text-align: center;
+  background: linear-gradient(rgb(77, 0, 235), rgb(117, 0, 249));
+  color: white;
+  padding: 10px 20px 10px 20px;
+  margin-top: 10px;
+  border-radius: 120px;
+  text-align: center !important;
+  align-items: center !important;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+
+}
+
+
+/*================================================================ online booking=========================================================== */
+
+
+
+
+/* ====================================================================footer====================================================================== */
+/* General Footer Styling */
+.footer {
+  background-color: #f8f9fa;
+  border-top: 2px solid #a7a7ff;
+  padding: 40px 0;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.footer-heading {
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.footer-link:hover {
+  color: #5d00ff;
+  text-decoration: none !important;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  background-color: #e0f2ff;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-image img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* General Footer Link Styling */
+.footer-link {
+  color: #6c757d;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Icon Animation */
+.footer-link i {
+  margin-right: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+ul li:hover .footer-link i {
+  transform: translateX(5px);
+}
+
+/* Optional: Adding hover underline effect */
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/*====================================================== blog=============================================================== */
+.inner-blog {
+  padding: 100px 170px 100px 170px;
+}
+
+.blog-head p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.blog-head h1 {
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 54px;
+}
+
+.blog-img {
+  position: relative;
+  display: inline-block;
+}
+
+.blog-img img {
+  border-radius: 15px;
+}
+
+.blog-overlay {
+  position: absolute;
+  background-color: white;
+  border-radius: 25px 25px 0px 0px;
+  padding: 30px;
+  margin: 0px 20px 0px 20px;
+  bottom: 0;
+}
+
+.blog-img h4 {
+  font-family: "Vesper Libre", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.blog-img .blog-overlay span {
+  color: #5d00ff;
+  font-weight: 600;
+}
+
+.blog-img :hover .blog-img span {
+  color: white !important;
+}
+
+.blog-img:hover .blog-overlay {
+  margin-bottom: 30px;
+  border-radius: 20px;
+  transition: all ease-in 0.3s;
+  background: linear-gradient(rgb(77, 0, 235), rgb(117, 0, 249));
+  color: white;
+}
+
+.blog-img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  /* Optional: Rounds the corners of the image */
+}
+
+.blog-img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease, filter 0.8s ease;
+  /* Smooth zoom and blur effect */
+}
+
+.blog-img:hover img {
+  transform: scale(1.1);
+  /* Slight zoom effect */
+  filter: blur(1px) brightness(0.8);
+  /* Blur effect with brightness adjustment */
+  background-color: rgba(123, 15, 224, 0.6);
+  /* Violet color with opacity */
+}

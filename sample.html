@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Falling Circles Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        #game-container {
+            position: relative;
+            width: 400px;
+            height: 600px;
+            border: 2px solid #333;
+            background-color: white;
+        }
+        #player {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: #007bff;
+        }
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: red;
+        }
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="score">Score: 0</div>
+        <div id="player"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script>
+        const gameContainer = document.getElementById('game-container');
+        const player = document.getElementById('player');
+        const scoreDisplay = document.getElementById('score');
+        let score = 0;
+
+        // Function to create falling circles
+        function createCircle() {
+            const circle = document.createElement('div');
+            circle.className = 'circle';
+            circle.style.width = `${Math.random() * 30 + 20}px`;
+            circle.style.height = circle.style.width;
+            circle.style.left = `${Math.random() * (gameContainer.clientWidth - 40)}px`;
+            gameContainer.appendChild(circle);
+
+            // Animate the circle falling
+            gsap.to(circle, {
+                y: gameContainer.clientHeight,
+                duration: 3,
+                onComplete: () => {
+                    circle.remove();
+                },
+                onUpdate: () => {
+                    if (isColliding(circle, player)) {
+                        score++;
+                        scoreDisplay.innerText = `Score: ${score}`;
+                        gsap.to(circle, { alpha: 0 }); // Hide the circle if caught
+                        circle.remove();
+                    }
+                }
+            });
+        }
+
+        // Function to check for collisions
+        function isColliding(circle, player) {
+            const circleRect = circle.getBoundingClientRect();
+            const playerRect = player.getBoundingClientRect();
+            return !(
+                circleRect.right < playerRect.left ||
+                circleRect.left > playerRect.right ||
+                circleRect.bottom < playerRect.top ||
+                circleRect.top > playerRect.bottom
+            );
+        }
+
+        // Move the player with arrow keys
+        document.addEventListener('keydown', (e) => {
+            const playerRect = player.getBoundingClientRect();
+            const containerRect = gameContainer.getBoundingClientRect();
+            if (e.key === 'ArrowLeft' && playerRect.left > containerRect.left) {
+                gsap.to(player, { x: '-=30' });
+            } else if (e.key === 'ArrowRight' && playerRect.right < containerRect.right) {
+                gsap.to(player, { x: '+=30' });
+            }
+        });
+
+        // Start the game
+        setInterval(createCircle, 1000); // Create a new circle every second
+    </script>
+
+</body>
+</html>

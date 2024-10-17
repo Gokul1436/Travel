@@ -1,0 +1,219 @@
+<Section>
+        <div class="hero">
+            <!-- <div class="hero-child"><img src="./assets/image/banner/shape-1.png" alt=""></div>  -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="hero-inner">
+                            <div class="mb-5">
+                                <h1>Explore <br> Your Travel</h1>
+                                <h3>Discover your next great adventure, become an explorer to get started!</h3>
+                            </div>
+                            <div class="form-group search-inner ">
+                                <input class="form-control" placeholder="Where to ?" type="text">
+                                <input class="form-control" placeholder="when ?" type="month">
+                                <input class="form-control" placeholder="Travel Type?" type="text">
+                                <!-- <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div> -->
+                                <a><i class="bi bi-search"></i> Find Now</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
+
+
+    <section>
+        <div class="container">
+            
+        </div>
+     </section>
+
+
+
+     
+.hero {
+    width: 100%;
+    background-image: url(../image/banner/banner-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  /* .hero-child {
+    position: absolute;
+    background-size: cover;
+    background-image: url(../image/banner/shape-1.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    bottom: 0% !important;
+  } */
+  .hero-inner {
+    padding: 250px 40px 250px 40px;
+  }
+  .search-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px 40px 20px 40px;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .hero-inner h1 {
+    color: var(--background-color);
+    font-size:68px;
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .hero-inner h3{
+    color:var(--background-color) ;
+  }
+  .search-inner input ,select {
+    width: 20%;
+    height: 60px;
+  }
+  .hero-inner a{
+    background-color: var(--secondary-color);
+    width: 20%;
+    text-align: center;
+    align-content: center;
+    border-radius:.25rem;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- blog -->
+  <section class="blog-section text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="top-head mb-3 ">
+                    <div class="mb-3 top-head-1">
+                        <img decoding="async"
+                            src="https://themexriver.com/wp/goyto/wp-content/uploads/2024/04/plane.svg" alt="">
+                        <span class="welcome-p">Blog & news</span>
+                        <img decoding="async"
+                            src="https://themexriver.com/wp/goyto/wp-content/uploads/2024/04/plane.svg" alt="">
+                    </div>
+                    <h1>Get More Update
+                        News & Blog</h1>
+                    <p>Stay informed and inspired by subscribing to our newsletter for the latest news and
+                        insightful blog posts – your gateway to a world of updates.</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <!-- Blog Post 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card">
+                    <img src="./assets/image/img/blog-1.webp" alt="Blog 1">
+                    <div class="blog-card-body">
+                        <h5 class="blog-title">Beach Days, Long Hikes, And Adventures</h5>
+                        <div class="meta">
+                            <a href="#">Emma Mark</a> • October 1, 2024
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card">
+                    <img src="./assets/image/img/blog-2.webp" alt="Blog 2">
+                    <div class="blog-card-body">
+                        <h5 class="blog-title">Island Hopping And Weather Tips</h5>
+                        <div class="meta">
+                            <a href="#">Emma Mark</a> • October 1, 2024
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="blog-card">
+                    <img src="./assets/image/img/blog-3.webp" alt="Blog 3">
+                    <div class="blog-card-body">
+                        <h5 class="blog-title">Assertively Iterate Resource Maximizing</h5>
+                        <div class="meta">
+                            <a href="#">Emma Mark</a> • October 1, 2024
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="text-center mt-3">
+            <p>Want to see our top destinations? <a href="#">Click here to View More</a></p>
+        </div>
+    </div>
+</section>
+/* Custom Styling */
+.blog-section {
+ padding: 50px 0;
+}
+.blog-section h2 {
+ font-weight: bold;
+ margin-bottom: 20px;
+}
+.blog-section p {
+ color: #6c757d;
+ margin-bottom: 40px;
+}
+.blog-card {
+ border-radius: 15px;
+ overflow: hidden;
+ transition: all 0.3s ease;
+}
+.blog-card img {
+ border-top-left-radius: 15px;
+ border-top-right-radius: 15px;
+ height: 200px;
+ width: 100%;
+ object-fit: cover;
+}
+.blog-card-body {
+ padding: 15px;
+}
+.blog-card-body a {
+ text-decoration: none;
+ color: #5c59ff;
+ font-weight: bold;
+ transition: color 0.3s ease;
+}
+.blog-card-body a:hover {
+ color: #4a47e0;
+}
+.blog-card-body .meta {
+ font-size: 12px;
+ color: #6c757d;
+}
+.blog-card:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
